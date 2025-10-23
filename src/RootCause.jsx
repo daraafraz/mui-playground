@@ -721,9 +721,14 @@ function RootCause() {
                 { axisId: 'x-axis-id', minSpan: 1000 * 60 * 60 * 24 }, // Minimum span of 1 day
                 { axisId: 'y-axis-id' }
               ]}
+              tooltip={{ trigger: 'axis' }}
               sx={{
                 '& .MuiChartsLegend-root': {
                   display: 'none',
+                },
+                cursor: 'grab',
+                '&:active': {
+                  cursor: 'grabbing',
                 },
               }}
             />
